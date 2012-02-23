@@ -1,0 +1,828 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<parameter name="DocCode" class="java.lang.String"/>
+	<parameter name="Subpier" class="java.lang.String"/>
+	<parameter name="CompanyNameT" class="java.lang.String"/>
+	<parameter name="CompanyNameE" class="java.lang.String"/>
+	<parameter name="Address1" class="java.lang.String"/>
+	<parameter name="Address2" class="java.lang.String"/>
+	<parameter name="VendorName" class="java.lang.String"/>
+	<parameter name="SaleMngName" class="java.lang.String"/>
+	<parameter name="Other" class="java.lang.String"/>
+	<parameter name="OrderDate" class="java.lang.String"/>
+	<parameter name="SendDate" class="java.lang.String"/>
+	<parameter name="CT_SDCM_SP" class="java.lang.String"/>
+	<parameter name="CT_SFM_SDCM" class="java.lang.String"/>
+	<parameter name="DCFee" class="java.lang.String"/>
+	<parameter name="SubCode" class="java.lang.String"/>
+	<parameter name="SysOrder" class="java.lang.String"/>
+	<parameter name="VatType" class="java.lang.String"/>
+	<parameter name="EffDate" class="java.lang.String"/>
+	<parameter name="Note" class="java.lang.String"/>
+	<parameter name="chkComName" class="java.lang.String"/>
+	<parameter name="chkSubpier" class="java.lang.String"/>
+	<parameter name="chkAddress" class="java.lang.String"/>
+	<parameter name="chkVenName" class="java.lang.String"/>
+	<parameter name="chkOther" class="java.lang.String"/>
+	<parameter name="chkOrderDate" class="java.lang.String"/>
+	<parameter name="chkYVat" class="java.lang.String"/>
+	<parameter name="chkNVat" class="java.lang.String"/>
+	<parameter name="OldCompanyNameT" class="java.lang.String"/>
+	<parameter name="OldCompanyNameE" class="java.lang.String"/>
+	<parameter name="OldVendorName" class="java.lang.String"/>
+	<parameter name="DCFeeType" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="745" splitType="Stretch">
+			<staticText>
+				<reportElement x="60" y="23" width="194" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font fontName="Tahoma" size="10" isBold="true" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[รายละเอียดการเปิด/เปลี่ยนแปลงหน้าบัญชี]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="349" y="23" width="71" height="20"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Tahoma"/>
+				</textElement>
+				<text><![CDATA[Document No.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="420" y="23" width="100" height="20"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Tahoma" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{DocCode}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="77" y="58" width="65" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font fontName="Tahoma" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[ซัพพลายเออร์]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="77" y="84" width="40" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font fontName="Tahoma" isStrikeThrough="false" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[ชื่อบริษัท]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="75" y="190" width="23" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font fontName="Tahoma" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[ที่อยู่]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="75" y="294" width="51" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font fontName="Tahoma" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[วันสั่งซื้อ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="161" y="57" width="67" height="20"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Tahoma" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{Subpier}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="195" y="84" width="326" height="20"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Tahoma" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{OldCompanyNameT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="137" y="190" width="384" height="20"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Tahoma" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{Address1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="195" y="110" width="326" height="20"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Tahoma" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{CompanyNameT}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="304" y="294" width="81" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font fontName="Tahoma" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[วันกำหนดส่งสาขา]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="304" y="320" width="115" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font fontName="Tahoma" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Credit Term(SDCM-S/P)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="304" y="347" width="115" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font fontName="Tahoma" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Credit Term(SFM-SDCM)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="304" y="374" width="39" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font fontName="Tahoma" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[DC Fee]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="304" y="401" width="83" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font fontName="Tahoma" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[รหัสซัพพลายเออร์]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="137" y="211" width="384" height="20"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Tahoma" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{Address2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="387" y="294" width="133" height="20"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="Tahoma" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{SendDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="420" y="320" width="60" height="20"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="Tahoma" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{CT_SDCM_SP}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="195" y="238" width="326" height="20"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Tahoma" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{OldVendorName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="157" y="294" width="130" height="20"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="Tahoma" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{OrderDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="420" y="347" width="60" height="20"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="Tahoma" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{CT_SFM_SDCM}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="420" y="374" width="60" height="20"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="Tahoma" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{DCFee}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="420" y="401" width="60" height="20"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="Tahoma" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{SubCode}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="481" y="320" width="40" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[days]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="480" y="347" width="41" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[days]]></text>
+			</staticText>
+			<textField>
+				<reportElement mode="Opaque" x="106" y="188" width="0" height="12" backcolor="#000000">
+					<printWhenExpression><![CDATA[new Boolean($P{chkAddress}.equals("1"))]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Tahoma" isUnderline="false" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{chkAddress}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="57" y="65" width="12" height="12" backcolor="#000000">
+					<printWhenExpression><![CDATA[new Boolean($P{chkSubpier}.equals("1"))]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Tahoma" isUnderline="false" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{chkSubpier}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="55" y="302" width="12" height="12" backcolor="#000000">
+					<printWhenExpression><![CDATA[new Boolean($P{chkOrderDate}.equals("1"))]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Tahoma" isUnderline="false" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{chkOrderDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="57" y="65" width="12" height="12"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font size="6" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="57" y="92" width="12" height="12"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font size="6" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="55" y="198" width="12" height="12"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font size="6" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="55" y="302" width="12" height="12"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font size="6" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField>
+				<reportElement mode="Opaque" x="57" y="92" width="12" height="12" backcolor="#000000">
+					<printWhenExpression><![CDATA[new Boolean($P{chkComName}.equals("1"))]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Tahoma" isUnderline="false" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{chkComName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="305" y="430" width="70" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font fontName="Tahoma" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[ระบบการสั่งซื้อ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="363" y="460" width="118" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font fontName="Tahoma" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[จดทะเบียนภาษีแบบมี VAT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="363" y="487" width="136" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font fontName="Tahoma" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[จดทะเบียนภาษีแบบไม่มี VAT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="363" y="518" width="57" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font fontName="Tahoma" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[มีผลวันที่]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="83" y="518" width="59" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font fontName="Tahoma" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[หมายเหตุ : ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="374" y="430" width="44" height="20"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="Tahoma" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{SysOrder}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="421" y="430" width="54" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font fontName="Tahoma" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[VAT TYPE]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="475" y="431" width="44" height="20"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="Tahoma" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{VatType}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="140" y="518" width="155" height="20"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Tahoma" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{Note}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="421" y="518" width="97" height="20"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font fontName="Tahoma" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{EffDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="335" y="495" width="12" height="12" backcolor="#000000">
+					<printWhenExpression><![CDATA[new Boolean($P{chkNVat}.equals("1"))]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Tahoma" isUnderline="false" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{chkNVat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="335" y="468" width="12" height="12" backcolor="#000000">
+					<printWhenExpression><![CDATA[new Boolean($P{chkYVat}.equals("1"))]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Tahoma" isUnderline="false" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{chkYVat}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="335" y="468" width="12" height="12"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font size="6" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="335" y="495" width="12" height="12"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font size="6" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="78" y="575" width="437" height="139"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font size="6" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="78" y="604" width="88" height="110"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font size="6" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="166" y="604" width="88" height="110"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font size="6" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="254" y="604" width="88" height="110"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font size="6" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="342" y="604" width="88" height="110"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font size="6" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="78" y="575" width="437" height="29"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font size="6" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="78" y="604" width="437" height="19"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font size="6" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="78" y="685" width="437" height="29"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font size="6" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="430" y="604" width="85" height="110"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font size="6" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="257" y="577" width="83" height="20"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Tahoma" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Siam Family Mart]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="95" y="599" width="57" height="20"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Tahoma" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[GM / FOOD]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="171" y="599" width="80" height="20"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Tahoma" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[GM / NON FOOD]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="272" y="599" width="56" height="20"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Tahoma" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[GM / F & F]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="361" y="599" width="57" height="20"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Tahoma" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[MANAGER]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="450" y="599" width="48" height="20"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Tahoma" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[BUYER]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="92" y="692" width="60" height="20"/>
+				<textElement/>
+				<text><![CDATA[..... / ..... / .....]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="179" y="692" width="60" height="20"/>
+				<textElement/>
+				<text><![CDATA[..... / ..... / .....]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="268" y="692" width="60" height="20"/>
+				<textElement/>
+				<text><![CDATA[..... / ..... / .....]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="356" y="692" width="60" height="20"/>
+				<textElement/>
+				<text><![CDATA[..... / ..... / .....]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="443" y="692" width="60" height="20"/>
+				<textElement/>
+				<text><![CDATA[..... / ..... / .....]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="195" y="164" width="326" height="20"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Tahoma" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{CompanyNameE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="195" y="137" width="326" height="20"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Tahoma" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{OldCompanyNameE}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="137" y="84" width="56" height="20"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Tahoma" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Thai (เก่า) :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="137" y="110" width="56" height="20"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Tahoma" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Thai (ใหม่) :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="137" y="137" width="56" height="20"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Tahoma" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Eng (เก่า) :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="137" y="164" width="56" height="20"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Tahoma" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Eng (ใหม่) :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="105" y="190" width="32" height="20"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="Tahoma" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[เก่า :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="105" y="211" width="32" height="20"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="Tahoma" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[ใหม่ :]]></text>
+			</staticText>
+			<textField>
+				<reportElement mode="Opaque" x="55" y="246" width="12" height="12" backcolor="#000000">
+					<printWhenExpression><![CDATA[new Boolean($P{chkOther}.equals("1"))]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Tahoma" isUnderline="false" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{chkOther}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="55" y="246" width="12" height="12"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font size="6" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="195" y="258" width="326" height="20"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Tahoma" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{VendorName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="74" y="238" width="83" height="20"/>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font fontName="Tahoma" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[อื่น ๆ (ชื่อผู้ติดต่อ)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="157" y="258" width="30" height="20"/>
+				<box>
+					<bottomPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="Tahoma" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[ใหม่ :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="157" y="237" width="30" height="20"/>
+				<box>
+					<bottomPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Bottom">
+					<font fontName="Tahoma" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[เก่า :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="481" y="374" width="40" height="20"/>
+				<box>
+					<bottomPen lineWidth="0.0"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Bottom">
+					<font fontName="Tahoma" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{DCFeeType}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="55" y="198" width="12" height="12" backcolor="#000000">
+					<printWhenExpression><![CDATA[new Boolean($P{chkAddress}.equals("1"))]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font fontName="Tahoma" isUnderline="false" pdfFontName="C:\\WINDOWS\\Fonts\\tahoma.ttf" pdfEncoding="Identity-H"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{chkAddress}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+</jasperReport>

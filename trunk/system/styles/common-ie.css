@@ -1,0 +1,12 @@
+#page_header {
+	height: 38px;
+}
+
+.label {
+	margin-right: 3px;
+	padding-top: 6px;
+}
+
+#page_tab .active_tab {
+	padding-top: 3px;
+}

@@ -1,0 +1,35 @@
+body {
+	margin: 0;
+	background-image: url('../images/bg_header.gif');
+	background-repeat:repeat-x;
+}
+
+#table_main {
+	position: absolute;
+	height: 31px;
+	top: 14px;
+}
+
+.bar {
+	background-image: url('../images/bar_header.gif');
+}
+
+.bar_text {
+	color: white;
+	font-family: MS Sans Serif;
+	font-size:8pt;
+	padding-top: 10px;
+	padding-left: 2px;
+	padding-right: 2px;
+}
+
+.bar_gab {
+	color: white;
+	padding-left: 10px;
+}
+
+#bar_curv {
+	width: 73px;
+	height: 31px;
+	background-image: url('../images/bar_curv.gif');
+}
