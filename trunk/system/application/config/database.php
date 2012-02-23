@@ -39,7 +39,7 @@ $active_record = TRUE;
 
 $db['default']['hostname'] = "localhost";
 $db['default']['username'] = "root";
-$db['default']['password'] = "p@55word";
+$db['default']['password'] = "rootpass";
 $db['default']['database'] = "thepvimol";
 $db['default']['dbdriver'] = "mysql";
 $db['default']['dbprefix'] = "";
