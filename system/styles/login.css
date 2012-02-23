@@ -1,0 +1,21 @@
+#login {
+	width: 321px;
+	height: 179px;
+	background-image: url('../images/login.png');
+	background-repeat: no-repeat;
+	font-family: MS Sans Serif;
+	font-size:10px;
+	color: #144f8a;
+}
+
+#div_login .error {
+	color: red;
+	font-family: MS Sans Serif;
+	font-size:10pt;
+	background: none;
+}
+
+#page_button .button_login {
+	background-image: url('../images/button/login.png');
+	width: 78px;
+}
